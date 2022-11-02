@@ -5,8 +5,6 @@ fetch("https://api.tvmaze.com/shows")
 
 	.then((data) => dataArr.push(...data))
 
-	.catch((error) => {
-		console.error(error);
-	});
+	.catch((error) => console.error(error));
 
 console.log(dataArr);
