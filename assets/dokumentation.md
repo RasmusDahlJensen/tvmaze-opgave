@@ -8,12 +8,12 @@ Title
 Cover
 Summary
 
-Same en kasse på venstre side som viser vilkårlige serier af samme genre
-der har antal hjerter på venstre side af titlen og tilten på højre side
-
 - Showinfo:
   Genre
   Status: "Ended" eller 'Running'
-  Schedule vis serien stadig er running
+  Schedule vis serien stadig er running ellers vis kun runtime
   Rating ud af 10 samt en række hjerter som viser det visuelt
   Language
+  Premiered Ended
+
+Same en kasse under som viser serier i samme genre
