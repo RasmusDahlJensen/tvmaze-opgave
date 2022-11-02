@@ -39,7 +39,6 @@ const generateGenres = () => {
 	});
 	//Filter films out in the correct genre category
 	dataArr.forEach((film) => {
-		console.log(film);
 		film.genres.forEach((genre) => {
 			let container = document.getElementById(`${genre}`);
 			if (genre == container.id) {
