@@ -19,7 +19,7 @@ fetch("https://api.tvmaze.com/shows")
 		});
 	});
 
-//Generate sections of genres
+//Dynamically generate sections of genres
 const generateGenres = (genre) => {
 	genre.forEach((genre) => {
 		console.log(genre);
