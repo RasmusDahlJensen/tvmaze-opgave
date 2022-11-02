@@ -38,7 +38,6 @@ const generateGenres = () => {
 		});
 	});
 	//Filter films out in the correct genre category
-	const containers = document.querySelectorAll(".filmContainer");
 	dataArr.forEach((film) => {
 		console.log(film);
 		film.genres.forEach((genre) => {
