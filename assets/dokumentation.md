@@ -17,3 +17,4 @@ Summary
   Premiered Ended
 
 Same en kasse under som viser serier i samme genre
+De forskellige kasser på forsiden og inde på selve serie siden skal kunne dragges / scrolles med musen for at vise serier til højre og venstre
