@@ -1,5 +1,5 @@
 //Fetch dom element
-let genreContainer = document.getElementById("genres");
+const genreContainer = document.getElementById("genres");
 
 //Create array
 const dataArr = [];
@@ -13,26 +13,42 @@ fetch("https://api.tvmaze.com/shows")
 	.catch((error) => console.error(error))
 
 	.finally(() => {
-		dataArr.forEach((ele) => {
-			generateGenres(ele.genres);
-			// console.log(ele.genres);
-		});
+		generateGenres();
 	});
 
 //Dynamically generate sections of genres
-const generateGenres = (genre) => {
-	genre.forEach((genre) => {
-		console.log(genre);
-		if (!document.getElementById(`${genre}`)) {
-			//Create flex-div
-			const flexDiv = document.createElement("div");
-			genreContainer.appendChild(flexDiv);
-			flexDiv.classList.add("genreFlex");
-			flexDiv.setAttribute("id", `${genre}`);
-			//Create and append category name
-			const genreName = document.createElement("h2");
-			flexDiv.appendChild(genreName);
-			genreName.innerHTML = `${genre}`;
-		}
+const generateGenres = () => {
+	dataArr.forEach((film) => {
+		film.genres.forEach((genre) => {
+			if (!document.getElementById(`${genre}`)) {
+				//Create flex-div
+				const flexDiv = document.createElement("div");
+				genreContainer.appendChild(flexDiv);
+				flexDiv.classList.add("genreFlex");
+				//Create and append category name
+				const genreName = document.createElement("h2");
+				flexDiv.appendChild(genreName);
+				genreName.innerHTML = `${genre}`;
+				//Create and append div that contains the films
+				const filmContainer = document.createElement("div");
+				flexDiv.appendChild(filmContainer);
+				filmContainer.setAttribute("id", `${genre}`);
+				filmContainer.classList.add("filmContainer");
+			}
+		});
+	});
+	//Filter films out in the correct genre category
+	dataArr.forEach((film) => {
+		console.log(film);
+		film.genres.forEach((genre) => {
+			let container = document.getElementById(`${genre}`);
+			if (genre == container.id) {
+				container.innerHTML += `
+                
+                ${film.name}
+
+                `;
+			}
+		});
 	});
 };
