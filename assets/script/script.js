@@ -9,6 +9,10 @@ fetch("https://api.tvmaze.com/shows")
 
 	.finally(() => {
 		dataArr.forEach((ele) => {
-			console.log(ele.genres);
+			generateGenres(ele.genres);
 		});
 	});
+
+const generateGenres = (genre) => {
+	console.log(genre);
+};
