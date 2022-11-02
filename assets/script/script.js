@@ -1,5 +1,10 @@
+//Fetch dom element
+let genreContainer = document.getElementById("genres");
+
+//Create array
 const dataArr = [];
 
+//Fetch data
 fetch("https://api.tvmaze.com/shows")
 	.then((response) => response.json())
 
@@ -13,6 +18,7 @@ fetch("https://api.tvmaze.com/shows")
 		});
 	});
 
+//Generate sections of genres
 const generateGenres = (genre) => {
 	console.log(genre);
 };
