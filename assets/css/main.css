@@ -61,6 +61,28 @@
   text-align: center;
 }
 
+.heroFlex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid black;
+  padding-bottom: 50px;
+}
+.heroFlex img {
+  width: 150px;
+}
+
+#searchBar {
+  width: 500px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 15px;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=main.css.map */
