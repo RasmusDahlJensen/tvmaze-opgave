@@ -43,9 +43,12 @@ const generateGenres = () => {
 			let container = document.getElementById(`${genre}`);
 			if (genre == container.id) {
 				container.innerHTML += `
-                
-                ${film.name}
-
+                <div class="card">
+					<div class = "cardContent">
+					<img src="${film.image.medium}">
+						${film.name}
+					</div>
+				</div>
                 `;
 			}
 		});
