@@ -7,7 +7,6 @@
 	overflow: hidden;
 	width: 100%;
 	cursor: grab;
-	user-select: none;
 }
 
 .genreFlex {
@@ -22,7 +21,6 @@
 .card {
 	border: 1px solid black;
 	text-align: center;
-	user-select: none;
 	background-color: rgb(224, 224, 224);
 	.cardContent {
 		height: 350px;

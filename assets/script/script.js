@@ -72,6 +72,7 @@ const generateGenres = () => {
 		});
 	});
 	scrollableDiv();
+	cardButtons();
 };
 
 //scrollable containers
@@ -104,6 +105,23 @@ const scrollableDiv = () => {
 			slider.scrollLeft = scrollLeft - walk;
 		});
 	});
+};
+
+//Add onclicks to all film cards
+const cardButtons = () => {
+	cards = document.querySelectorAll(".card");
+	cards.forEach((card) => {
+		card.addEventListener("click", (event) => {
+			renderInfo(event.currentTarget.innerText);
+		});
+	});
+};
+
+//Click on a card and get sent to another page
+const renderInfo = (target) => {
+	let getInput = target;
+	localStorage.setItem("storage", getInput);
+	window.location.href = "../filminfo.html";
 };
 
 // //Filter films

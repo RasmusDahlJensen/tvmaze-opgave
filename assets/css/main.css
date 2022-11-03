@@ -7,10 +7,6 @@
   width: 100%;
   cursor: -webkit-grab;
   cursor: grab;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .genreFlex {
@@ -25,10 +21,6 @@
 .card {
   border: 1px solid black;
   text-align: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   background-color: rgb(224, 224, 224);
 }
 .card .cardContent {
