@@ -1,0 +1,32 @@
+//Film container
+.filmContainer {
+	display: flex;
+	gap: 25px;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	width: 800px;
+	cursor: grab;
+	user-select: none;
+}
+//Film cards
+.card {
+	border: 1px solid black;
+	text-align: center;
+	width: 100px;
+	user-select: none;
+	.cardContent {
+		display: flex;
+		flex-direction: column;
+	}
+	img {
+		width: 100px;
+	}
+}
+
+//Scroll active:
+.active {
+	background: #eeeeee93;
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
+	transform: scale(1.02);
+}
