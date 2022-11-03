@@ -1,41 +1,57 @@
+@use "colorpalette" as c;
 //Film container
 .filmContainer {
 	display: flex;
 	gap: 25px;
 	flex-wrap: nowrap;
 	overflow: hidden;
-	width: 800px;
+	width: 100%;
 	cursor: grab;
 	user-select: none;
+}
+
+.genreFlex {
+	border: 1px solid #b5b5b574;
+	border-radius: 10px;
+	margin-bottom: 25px;
+	padding: 10px 0 10px 0;
+	box-shadow: rgba(0, 0, 0, 0.245) 10px 5px 5px;
+	background-color: #e5e5e5d0;
 }
 //Film cards
 .card {
 	border: 1px solid black;
 	text-align: center;
-	width: 100px;
-	height: 200px;
 	user-select: none;
+	background-color: rgb(224, 224, 224);
 	.cardContent {
+		height: 350px;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+		p {
+			margin-bottom: 50px;
+			padding-bottom: 50px;
+		}
 	}
 	img {
-		width: 100px;
+		width: 200px;
 	}
 }
 
 //Scroll active:
 .active {
-	background: #eeeeee93;
 	cursor: grabbing;
 	cursor: -webkit-grabbing;
-	transform: scale(1.02);
+	transform: scale(1);
+	overflow: hidden;
 }
 
 #genres {
-	height: 750px;
+	height: 815px;
 	width: 820px;
 	overflow-x: hidden;
+	background-color: c.$blue5;
 }
 
 //Arrow position
@@ -54,4 +70,14 @@
 	padding: 5px;
 	box-shadow: black 5px 5px 5px;
 	text-align: center;
+}
+
+.headerFlex {
+	height: 80px;
+	h2 {
+		font-size: 40px;
+		font-weight: 300;
+		margin: 10px 0 0 0;
+		text-align: center;
+	}
 }

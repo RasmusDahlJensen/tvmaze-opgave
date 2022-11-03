@@ -1,20 +1,27 @@
-.moviecontainer{
-    display: flex;
+@use "colorpalette" as c;
 
-
-
+.moviecontainer {
+	display: flex;
+	// padding-top: 5px;
 }
 
-.flex{
-    display: flex;
-    flex-direction: column;
-    width: 150px ;
-    height: 100%;    
-
+#genres {
+	width: 100%;
+	padding: 5px;
 }
 
-.buttons{
+.flex {
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+	padding: 10px;
+	background-color: c.$blue3;
+	border-right: 1px solid black;
+	gap: 15px;
+}
 
-
-    
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }

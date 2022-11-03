@@ -64,7 +64,7 @@ const generateGenres = () => {
                 <div class="card">
 					<div class = "cardContent">
 					<img src="${film.image.medium}" draggable="false">
-						${film.name}
+					<p>${film.name}</p>
 					</div>
 				</div>
                 `;

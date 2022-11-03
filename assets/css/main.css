@@ -4,7 +4,7 @@
   gap: 25px;
   flex-wrap: nowrap;
   overflow: hidden;
-  width: 800px;
+  width: 100%;
   cursor: -webkit-grab;
   cursor: grab;
   -webkit-user-select: none;
@@ -13,35 +13,50 @@
           user-select: none;
 }
 
+.genreFlex {
+  border: 1px solid rgba(181, 181, 181, 0.4549019608);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 10px 0 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.245) 10px 5px 5px;
+  background-color: rgba(229, 229, 229, 0.8156862745);
+}
+
 .card {
   border: 1px solid black;
   text-align: center;
-  width: 100px;
-  height: 200px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: rgb(224, 224, 224);
 }
 .card .cardContent {
+  height: 350px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.card .cardContent p {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 .card img {
-  width: 100px;
+  width: 200px;
 }
 
 .active {
-  background: rgba(238, 238, 238, 0.5764705882);
   cursor: grabbing;
   cursor: -webkit-grabbing;
-  transform: scale(1.02);
+  transform: scale(1);
+  overflow: hidden;
 }
 
 #genres {
-  height: 750px;
+  height: 815px;
   width: 820px;
   overflow-x: hidden;
+  background-color: #6b728e;
 }
 
 .arrowContainer {
@@ -61,6 +76,41 @@
   text-align: center;
 }
 
+.headerFlex {
+  height: 80px;
+}
+.headerFlex h2 {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.moviecontainer {
+  display: flex;
+}
+
+#genres {
+  width: 100%;
+  padding: 5px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  padding: 10px;
+  background-color: #50577a;
+  border-right: 1px solid black;
+  gap: 15px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .heroFlex {
   background-color: #474e68;
   display: flex;
@@ -68,33 +118,21 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin-bottom: 50px;
   border-bottom: 1px solid black;
-  padding-bottom: 50px;
-  padding-top: 15px;
+  height: 125px;
 }
 .heroFlex img {
-  width: 75px;
+  width: 40px;
 }
 
 #searchBar {
   width: 500px;
-  height: 30px;
+  height: 20px;
   border: 1px solid black;
   border-radius: 50px;
   padding: 15px;
   background-color: #6b728e;
-}
-
-.moviecontainer {
-  display: flex;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-  width: 150px;
-  height: 100%;
+  margin-top: -40px;
 }
 
 * {
