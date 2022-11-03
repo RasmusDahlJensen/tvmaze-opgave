@@ -21,17 +21,17 @@ const generateGenres = () => {
 	dataArr.forEach((film) => {
 		film.genres.forEach((genre) => {
 			if (!document.getElementById(`${genre}`)) {
-				//Content div
-				const content = document.createElement("div");
-				genreContainer.appendChild(content);
-				content.classList.add("genreContent");
 				//Create flex-div
 				const flexDiv = document.createElement("div");
-				content.appendChild(flexDiv);
+				genreContainer.appendChild(flexDiv);
 				flexDiv.classList.add("genreFlex");
+				//Title
+				const headerContainer = document.createElement("div");
+				flexDiv.appendChild(headerContainer);
+				headerContainer.classList.add("headerFlex");
 				//Create and append category name
 				const genreName = document.createElement("h2");
-				flexDiv.appendChild(genreName);
+				headerContainer.appendChild(genreName);
 				genreName.innerHTML = `${genre}`;
 				//Create and append div that contains the films
 				const filmContainer = document.createElement("div");
@@ -41,11 +41,17 @@ const generateGenres = () => {
 				//Arrow div
 				const arrowContainer = document.createElement("div");
 				arrowContainer.classList.add("arrowContainer");
-				content.appendChild(arrowContainer);
-				//Arrow for flex div
+				headerContainer.appendChild(arrowContainer);
+				//arrows and H2 in header
+				const arrowLeft = document.createElement("img");
+				arrowContainer.appendChild(arrowLeft);
+				arrowLeft.setAttribute("src", "/assets/images/arrowBack.svg");
+				arrowLeft.classList.add("arrow");
 				const arrowRight = document.createElement("img");
 				arrowContainer.appendChild(arrowRight);
 				arrowRight.setAttribute("src", "/assets/images/arrowForward.svg");
+				arrowRight.classList.add("arrow");
+				arrowRight.style.color = "white";
 			}
 		});
 	});
