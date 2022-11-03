@@ -21,9 +21,13 @@ const generateGenres = () => {
 	dataArr.forEach((film) => {
 		film.genres.forEach((genre) => {
 			if (!document.getElementById(`${genre}`)) {
+				//Content div
+				const content = document.createElement("div");
+				genreContainer.appendChild(content);
+				content.classList.add("genreContent");
 				//Create flex-div
 				const flexDiv = document.createElement("div");
-				genreContainer.appendChild(flexDiv);
+				content.appendChild(flexDiv);
 				flexDiv.classList.add("genreFlex");
 				//Create and append category name
 				const genreName = document.createElement("h2");
@@ -34,6 +38,14 @@ const generateGenres = () => {
 				flexDiv.appendChild(filmContainer);
 				filmContainer.setAttribute("id", `${genre}`);
 				filmContainer.classList.add("filmContainer");
+				//Arrow div
+				const arrowContainer = document.createElement("div");
+				arrowContainer.classList.add("arrowContainer");
+				content.appendChild(arrowContainer);
+				//Arrow for flex div
+				const arrowRight = document.createElement("img");
+				arrowContainer.appendChild(arrowRight);
+				arrowRight.setAttribute("src", "/assets/images/arrowForward.svg");
 			}
 		});
 	});
@@ -82,9 +94,8 @@ const scrollableDiv = () => {
 			if (!isDown) return;
 			e.preventDefault();
 			const x = e.pageX - slider.offsetLeft;
-			const walk = (x - startX) * 3; //scroll-fast
+			const walk = (x - startX) * 2; //scroll-fast
 			slider.scrollLeft = scrollLeft - walk;
-			// console.log(walk);
 		});
 	});
 };

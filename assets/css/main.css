@@ -37,6 +37,16 @@
   transform: scale(1.02);
 }
 
+#genres {
+  height: 750px;
+  width: 820px;
+  overflow-x: hidden;
+}
+
+.genreContent {
+  display: flex;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=main.css.map */
