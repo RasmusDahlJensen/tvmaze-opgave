@@ -105,3 +105,21 @@ const scrollableDiv = () => {
 		});
 	});
 };
+
+// //Filter films
+// const filter = (value) => {
+// 	console.log(value);
+// 	const genres = document.querySelectorAll(`.genreFlex:not(.${value})`);
+// 	genres.forEach((genre) => {
+// 		console.log(genre);
+// 	});
+// };
+
+// let checkboxes = document.querySelectorAll(".checkbox");
+// checkboxes.forEach((checkbox) => {
+// 	checkbox.addEventListener("click", () => {
+// 		if (checkbox.checked === true) {
+// 			filter(checkbox.value);
+// 		}
+// 	});
+// });
